@@ -6,6 +6,6 @@ WORKDIR /app
 RUN pip install --upgrade pip
 RUN pip install flask
 
-
-ENTRYPOINT ["python", "app.py"]
+EXPOSE 8080
+ENTRYPOINT ["python", "app.py", "runserver", "0.0.0.0:8080"]
 
